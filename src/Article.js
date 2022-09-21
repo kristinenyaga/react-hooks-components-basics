@@ -1,9 +1,17 @@
 import React from "react";
 
-function Article() {
-  return (
-    <div>Dear Reader: Bjarne Stroustrup has the perfect lecture oration.</div>
-  );
+function Article(props) {
+  
+    if(!props.isPublished){
+      return null
+    }
+    else{
+      return (
+        <div>{props.textContent}</div>
+      )
+    }
+    
+ 
 }
 
 export default Article;
